@@ -1,0 +1,332 @@
+body {
+    background-color: #f9fafc; /* Change the color as needed */
+}
+
+/* "Navbar" section */
+
+/* Set the navbar height using CSS clamp */
+.navbar {
+    padding-top: clamp(1em, 5vh, 5rem); /* Adjust the min, preferred, and max values as needed */
+    padding-bottom: clamp(1em, 5vh, 5rem); /* Adjust the min, preferred, and max values as needed */
+}
+
+/* Center the content vertically in the navbar */
+.navbar-brand, .navbar-toggler {
+    display: flex;
+    align-items: center;
+}
+
+/* Center the navigation links horizontally */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* Create a thin line between "Jack Hockey" and "Approach" for larger screens */
+@media (min-width: 768px) {
+    .navbar-brand::after {
+        content: "";
+        display: block;
+        background-color: #00166A; /* Change the color as needed */
+        margin-left: 40px; /* Adjust the margin for spacing */
+    }
+}
+
+/* Center the text and line vertically in the navbar */
+.navbar-brand, .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure the "Approach" and "Contact Me" items stay on the same line */
+.navbar-nav {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+}
+
+/* Center the social media icons (images) horizontally within their nav-links */
+.navbar-nav:last-child .nav-item .nav-link {
+    display: flex;
+    justify-content: center; /* Horizontally center the social media icons */
+}
+
+/* When the menu is collapsed, align the social media icons to the left */
+@media (max-width: 767px) {
+    .navbar-nav:last-child .nav-item .nav-link {
+        justify-content: flex-start;
+    }
+}
+
+/* Set the font size for the navigation links to Raleway Regular using CSS clamp and vw units */
+.navbar-nav .nav-link {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; /* Raleway Regular */
+    font-size: clamp(1rem, 1.5, 1.5rem); /* Adjust the min, preferred, and max font sizes as needed */
+    color:  #00166A;
+}
+
+/* Set the font size for the navbar brand to Montserrat Bold using CSS clamp and vw units */
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Montserrat Bold */
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Adjust the min, preferred, and max font sizes as needed */
+    color:  #00166A;
+}
+
+/* "Hero" section */
+
+/* Styling for the "Hero" section */
+.hero-section {
+    display: flex;
+}
+
+/* Styling for the "Hero" section */
+@media (min-width: 768px) {
+    .hero-section {
+        padding-top: 20vh; /* Occupy the entire viewport height for tablets and larger screens */
+        padding-bottom: 25vh; /* Occupy the entire viewport height for tablets and larger screens */
+    }
+}
+
+/* Set a specific padding value for smaller screens */
+@media (max-width: 767px) {
+    .hero-section {
+        padding-top: 2rem; /* Set a specific padding value for screens smaller than tablets */
+        padding-bottom: 4rem; /* Set a specific padding value for screens smaller than tablets */
+    }
+}
+
+/* Styling for the h1 paragraph text */
+h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem); /* Responsive font size using clamp */
+    line-height: clamp(3rem, 15vw, 5rem); /* Responsive line height using clamp */
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    color:  #00166A;
+}
+
+
+/* Styling for the h1 bolded text */
+.h1-bold-text {
+    font-weight: 800;
+    color:  #00166A;
+    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Change color on hover for bolded words */
+.h1-bold-text:hover {
+    color: #FFCB08;
+}
+
+/* Style the "My approach to design" link within a <p> tag */
+.my-approach-link {
+    text-decoration: underline;
+    cursor: pointer;
+    padding-top: 5%;
+}
+
+
+
+/* Projects section */
+
+h2 {
+    font-weight: 800;
+    color: #00166A;
+    font-family: 'Montserrat', sans-serif; /* Fixed the typo in the font name */
+    font-size: clamp(2rem, 3vw, 3rem); /* Responsive font size using clamp */
+
+}
+
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400; /* Raleway Regular */
+    font-size: clamp(1rem, 1vw, 1rem); /* Adjust the min, preferred, and max font sizes as needed using rem units */
+    line-height: clamp(1.8rem, 1.8vw, 1.8rem); /* Adjust the line height using rem units */
+    color: #00166A;
+}
+
+.text-container {
+    padding-top: 2.5%;
+    max-width: clamp(45rem, 45vw, 45rem); /* Adjust the min, preferred, and max as needed using rem units */
+}
+
+/* Project section styles */
+
+h3 {
+    font-weight: 800;
+    color: #00166A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2rem, 2vw, 2rem);
+}
+
+h4 {
+    font-weight: 800;
+    color: #00166A;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1rem, 1vw, 1rem);
+}
+
+.project-container {
+    padding: 5% 0;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    margin-top: 10vh;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-logo-1 {
+    height: clamp(8rem, 8vw, 8rem);
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.project-logo-2 {
+    height: clamp(10rem, 10vw, 10rem);
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.project-logo-3 {
+    height: clamp(3rem, 3vw, 3rem);
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+.project-logo-4 {
+    height: clamp(8rem, 8vw, 8rem);
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+/* Media Query for smaller screens (adjust the max-width as needed) */
+@media (max-width: 768px) {
+    .project-logo-2 {
+        margin-bottom: 5vh; /* Adjust padding for smaller screens */
+    }
+    .project-logo-1 {
+        margin-bottom: 5vh; /* Adjust padding for smaller screens */
+    }
+
+    }
+
+
+ /* Footer section styles */
+
+footer {
+    background-color: #00166A;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+footer h3, footer p {
+    color: #fff;
+    line-height: clamp(1.5rem, 1.5vw, 1.5rem);
+}
+
+footer h4 {
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0%;
+}
+
+@media (max-width: 767px) {
+    .middle {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2.4rem;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.col ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+}
+
+.col ul li {
+    margin: 0;
+    margin: clamp(1rem, 3vw, 3rem);
+}
+
+.col ul li img {
+    filter: invert(1) brightness(5);
+}
+
+/* Additional CSS to achieve text alignment and social media icon placement */
+@media (min-width: 768px) {
+    .col-md-8 {
+        text-align: left;
+    }
+    
+    .social-media-list {
+        justify-content: flex-start;
+    }
+}
+
+
+/* About page */
+.portrait {
+    border-radius: 50%; /* Make the image circular */
+    width: 100%; /* Make the image responsive */
+    max-width: 200px; /* Set a maximum width for the image */
+    border: 0.5rem solid #00166A; /* Add a border to the image */
+    margin-bottom: 1rem;
+
+  }
+
+  .subpagehero {
+    padding-bottom: 2rem;
+  }
+
+
+  .mockups {
+    width: 100%; /* Make the image width 100% of its containing element (the container) */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove any default inline styling */
+  }
+
+.aboagreen {
+    color: #214029 !important;
+}
+
+.hiupink {
+    color: #dc8d6e !important;
+}
+
+/* Add any additional custom styles here */
+.custom-image-container {
+    margin-bottom: 1.5em;
+  }
+  .custom-row-space {
+    margin-top: 1.5; }
